@@ -20,7 +20,7 @@ inputRef.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
 
 function onInput(event) {
   countryName = event.target.value;
-  searchCountries(countryName);
+  searchCountries(countryName.trim());
   if (!countryName) {
     resetMarkup();
   }
